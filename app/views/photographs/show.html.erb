@@ -1,0 +1,44 @@
+<main class="main">
+  <div class="inner">
+    <div class="prototype__wrapper">
+      <p class="prototype__hedding">
+        <%= @photograph.title %>
+      </p>
+      <%= link_to "by #{@photograph.user.nickname}", user_path(@photograph.user), class: :prototype__user %>
+
+      <% if user_signed_in? && current_user.id == @photograph.user_id %>
+        <div class="prototype__manage">
+          <%= link_to "編集する", "#", class: :prototype__btn %>
+          <%= link_to "削除する", "#", class: :prototype__btn, data: { turbo_method: :delete } %>
+        </div>
+      <% end %>
+
+      <div class="prototype__image">
+        <%= image_tag @photograph.image %>
+      </div>
+      <div class="prototype__body">
+        <div class="prototype__detail">
+          <p class="detail__title">天気カテゴリー</p>
+          <p class="detail__message">
+            <%= @photograph.category.name %>
+          </p>
+        </div>
+        <div class="prototype__detail">
+          <p class="detail__title">都道府県</p>
+          <p class="detail__message">
+            <%= @photograph.prefecture.name %>
+          </p>
+        </div>
+        <div class="prototype__detail">
+          <p class="detail__title">物語</p>
+          <p class="detail__message">
+            <%= @photograph.description %>
+          </p>
+        </div>
+      </div>
+      <div class="prototype__comments">
+        
+      </div>
+    </div>
+  </div>
+</main>

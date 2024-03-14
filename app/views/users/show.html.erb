@@ -16,8 +16,7 @@
         <%= "#{@user.nickname}さんのプロトタイプ"%>
       </h2>
       <div class="user__card">
-        <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
-        <% render partial: 'photographs/photograph', collection: @user.photographs %>
+        <%= render partial: 'photographs/photograph', collection: @user.photographs %>
       </div>
     </div>
   </div>
