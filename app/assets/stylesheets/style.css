@@ -212,7 +212,7 @@ a {
 .prototype__manage{
   display: flex;
   justify-content: center;
-  padding-top: 16px;
+  padding-top: 20px;
 }
 .prototype__btn{
   display: block;
