@@ -8,8 +8,8 @@
 
       <% if user_signed_in? && current_user.id == @photograph.user_id %>
         <div class="prototype__manage">
-          <%= link_to "編集する", "#", class: :prototype__btn %>
-          <%= link_to "削除する", "#", class: :prototype__btn, data: { turbo_method: :delete } %>
+          <%= link_to "編集する", edit_photograph_path(@photograph), class: :prototype__btn %>
+          <%= link_to "削除する", photograph_path(@photograph), class: :prototype__btn, data: { turbo_method: :delete } %>
         </div>
       <% end %>
 
@@ -30,7 +30,7 @@
           </p>
         </div>
         <div class="prototype__detail">
-          <p class="detail__title">物語</p>
+          <p class="detail__title">思い出語り</p>
           <p class="detail__message">
             <%= @photograph.description %>
           </p>
