@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <div class="card">
   <%= link_to image_tag(photograph.image, class: :card__img ), photograph_path(photograph.id) %>
   <div class="card__body">
@@ -5,3 +6,4 @@
     <%= link_to "by #{photograph.user.nickname}",user_path(photograph.user.id), class: :card__user %>
   </div>
 </div>
+<% end %>
