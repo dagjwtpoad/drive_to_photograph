@@ -41,16 +41,17 @@ a {
 }
 .copyright {
   text-align: center;
-  color: #fff;
+  color: whitesmoke;
   font-size: 10px;
 }
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
-  margin-bottom: 40px;
-  padding: 20px 0;
-
+  background-color: lightseagreen;
+  padding: 10px 0;
+}
+.main{
+  background-color: white;
 }
 .inner {
   width: 1024px;
@@ -68,23 +69,23 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: black;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px black solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
-  color: #fff;
-  background: #87CEFA;
+  color: white;
+  background: black;
 }
 
 .nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: black;
   text-decoration: none;
   user-select: none;
 }
@@ -137,8 +138,15 @@ a {
 
 /* メイン */
 
+.top_title{
+  color: #3b4043;
+  font-size: 25px;
+}
 .greeting{
+  position: relative;
+  top: 20px;
   margin-bottom: 20px;
+  font-size: 25px;
 }
 .greeting__link{
   text-decoration: underline;
@@ -183,7 +191,7 @@ a {
   min-height: calc(100vh - 161px);
 }
 .prototype__hedding{
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
 }
@@ -232,9 +240,9 @@ a {
 }
 
 .prototype__comments{
-  background-color: #f6f6f6;
+  background-color: lightgoldenrodyellow;
   padding: 20px;
-  margin: 28px 0 40px 0;
+  margin: 28px 0 0 0;
 }
 
 .comments_lists{

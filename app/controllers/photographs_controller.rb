@@ -1,5 +1,6 @@
 class PhotographsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :edit, :destroy, :new]
+  before_action :set_photograph, only: [:edit, :show]
 
   def index
     @photographs = Photograph.all.order(created_at: :desc)
@@ -19,13 +20,13 @@ class PhotographsController < ApplicationController
   end
 
   def show
-    @photograph = Photograph.find(params[:id])
+    @comment = Comment.new
+    @comments = @photograph.comments.includes(:user)
   end
 
   def edit
-    @photograph = Photograph.find(params[:id])
-    unless current_user.id == @photograph.user_id
-      redirect_to root_path
+    unless user_signed_in? && current_user.id == @photograph.user_id
+      redirect_to action: :index
     end
   end
 
@@ -48,6 +49,10 @@ class PhotographsController < ApplicationController
 
   def photograph_params
     params.require(:photograph).permit(:title, :category_id, :prefecture_id, :description, :image).merge(user_id: current_user.id)
+  end
+
+  def set_photograph
+    @photograph = Photograph.find(params[:id])
   end
 
 end
