@@ -1,6 +1,7 @@
 class PhotographsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :edit, :destroy, :new]
   before_action :set_photograph, only: [:edit, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @photographs = Photograph.all.order(created_at: :desc)
@@ -22,6 +23,10 @@ class PhotographsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @photograph.comments.includes(:user)
+  end
+
+  def search
+    @photographs = Photograph.search(params[:keyword])
   end
 
   def edit
@@ -55,4 +60,10 @@ class PhotographsController < ApplicationController
     @photograph = Photograph.find(params[:id])
   end
 
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
+  end
 end

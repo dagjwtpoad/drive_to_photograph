@@ -18,4 +18,13 @@ class Photograph < ApplicationRecord
   validates :category_id, numericality: { other_than: 1 , message: "can't be blank"}
   validates :prefecture_id, numericality: { other_than: 1 , message: "can't be blank"}
 
+  def self.search(search)
+    if search != ""
+      Photograph.where('description LIKE(?)', "%#{search}%").
+        or(where('title LIKE(?)', "%#{search}%"))
+    else
+      Photograph.all
+    end
+  end
+
 end

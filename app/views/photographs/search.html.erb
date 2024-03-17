@@ -1,0 +1,21 @@
+<main class="main">
+  <div class="inner">
+    <% if user_signed_in? %>
+      <div class="greeting">
+        <%= "ようこそ、" %>
+        <%= link_to "Mr.#{current_user.nickname}", user_path(current_user), class: :greeting__link %>
+      </div>
+      <div class = search>
+        <%= form_with(url: search_photographs_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+          <%= form.submit "検索", class: "search-btn" %>
+        <% end %>
+      </div>
+      <div class="card__wrapper">
+        <% @photographs.each do |photograph| %>
+          <%= render partial: "photograph", locals: { photograph: photograph } %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</main>
