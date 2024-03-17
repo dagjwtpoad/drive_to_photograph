@@ -8,10 +8,10 @@ Drive to Photograph
 
 
 # テスト用アカウント
-・Basic認証パスワード:
-・Basic認証ID:
-・メールアドレス:
-・パスワード:
+・Basic認証パスワード:1114
+・Basic認証ID:admin
+・メールアドレス:oooooooooooo@ezweb.ne.jp
+・パスワード:zaq1xsw2
 
 # 利用方法
 
