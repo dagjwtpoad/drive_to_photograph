@@ -53,13 +53,12 @@ class PhotographsController < ApplicationController
   private
 
   def photograph_params
-    params.require(:photograph).permit(:title, :category_id, :prefecture_id, :description, :image).merge(user_id: current_user.id)
+    params.require(:photograph).permit(:title, :category_id, :prefecture_id, :description, :image, :address, :latitude, :longitude).merge(user_id: current_user.id)
   end
 
   def set_photograph
     @photograph = Photograph.find(params[:id])
   end
-
 
   def move_to_index
     unless user_signed_in?

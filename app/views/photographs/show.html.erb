@@ -18,29 +18,64 @@
       </div>
       <div class="prototype__body">
         <div class="prototype__detail">
-          <p class="detail__title">車種</p>
+          <p class="detail__title">-車種-</p>
           <p class="detail__message">
             <%= @photograph.category.name %>
           </p>
         </div>
         <div class="prototype__detail">
-          <p class="detail__title">都道府県</p>
+          <p class="detail__title">-都道府県-</p>
           <p class="detail__message">
             <%= @photograph.prefecture.name %>
           </p>
         </div>
         <div class="prototype__detail">
-          <p class="detail__title">思い出語り</p>
+          <p class="detail__title">-思い出語り-</p>
           <p class="detail__message">
             <%= @photograph.description %>
           </p>
         </div>
       </div>
+        <div class="prototype__detail">
+          <p class="detail__title">-撮影場所-</p>
+        </div>
+        <script type="text/javascript">
+          function initMap() {
+            var test = {lat: <%= @photograph.latitude %>, lng: <%= @photograph.longitude %>};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 15, 
+                      center: test
+                      });
+            var transitLayer = new google.maps.TransitLayer();
+            transitLayer.setMap(map);
+            var contentString = '住所：<%= @photograph.address %>';
+            var infowindow = new google.maps.InfoWindow({
+              content: contentString
+            });
+            var marker = new google.maps.Marker({
+                          position:test,
+                          map: map,
+                          title: contentString
+                        });
+            marker.addListener('click', function() {
+              infowindow.open(map, marker);
+            });
+          }
+        </script>
+        <script async defer
+                  src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
+        </script>
+        <style type="text/css">
+          #map { height: 500px;
+                margin-left: 150px;
+                width: 70%;}
+        </style>
+        <div id="map"></div>
       <div class="prototype__comments">
         <% if user_signed_in? %>
           <%= form_with model: [@photograph, @comment],local: true do |f|%>
             <div class="field">
-              <%= f.label :content, "コメント" %><br />
+              <%= f.label :content, "-コメント-" %><br />
               <%= f.text_field :content %>
             </div>
             <div class="actions">

@@ -4,6 +4,9 @@ class Photograph < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_one_attached :image
 
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+
   belongs_to :category
   belongs_to :prefecture
 

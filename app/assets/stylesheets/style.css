@@ -114,6 +114,7 @@ a {
 }
 
 .actions{
+  margin-top: 20px;
   margin-bottom: 40px;
 }
 
@@ -193,6 +194,7 @@ a {
   justify-content: space-between;
   align-items: center;
   min-height: calc(100vh - 161px);
+  padding-top: 20px;
 }
 .card {
   width: calc((100% - 50px) / 3);
@@ -237,7 +239,7 @@ a {
   text-decoration: underline;
 }
 .prototype__image{
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
   padding: 16px 0;
 }
@@ -246,10 +248,13 @@ a {
   align-items: center;
   flex-direction: column;
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 .detail__title{
   font-size: 20px;
   font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 3px;
 }
 .prototype__manage{
   display: flex;
