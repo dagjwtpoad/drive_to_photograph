@@ -221,29 +221,29 @@ a {
 }
 
 /* 詳細ページ */
-.prototype__wrapper{
+.photograph__wrapper{
   min-height: calc(100vh - 161px);
 }
-.prototype__hedding{
+.photograph__hedding{
   font-size: 35px;
   font-weight: bold;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 5px;
 }
-.prototype__user{
+.photograph__user{
   display: block;
   font-size: 16px;
   color: #999;
   text-align: center;
   text-decoration: underline;
 }
-.prototype__image{
+.photograph__image{
   width: 50%;
   margin: 0 auto;
   padding: 16px 0;
 }
-.prototype__detail{
+.photograph__detail{
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -256,12 +256,12 @@ a {
   margin-top: 5px;
   margin-bottom: 3px;
 }
-.prototype__manage{
+.photograph__manage{
   display: flex;
   justify-content: center;
   padding-top: 20px;
 }
-.prototype__btn{
+.photograph__btn{
   display: block;
   padding: 0.4em 1.6em;
   font-size: 0.4em;
@@ -273,12 +273,12 @@ a {
   transition: 0.4s ease;
   margin: 0 4px;
 }
-.prototype__btn:hover{
+.photograph__btn:hover{
   color: #fff;
   background: #999;
 }
 
-.prototype__comments{
+.photograph__comments{
   background-color: lightgoldenrodyellow;
   padding: 20px;
   margin: 28px 0 0 0;
