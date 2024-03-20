@@ -27,9 +27,10 @@
 
   <%= form_with(model: @photograph, local: true, class: "mt-4 form-column-width") do |f| %>
 
-  <%= f.label :address, "撮影場所", class: "form-label fw-bold"%>
-  <%= f.text_field :address, autofocus: true,placeholder: "住所を入力してください", class: "form-control" %>
-
+  <div class="field">
+    <%= f.label :address, "撮影地点", class: "form-label fw-bold"%><br />
+    <%= f.text_field :address, autofocus: true,placeholder: "場所を入力してください", class: "form-control" %>
+  </div>
   <% end %>
 
   <div class="actions">
