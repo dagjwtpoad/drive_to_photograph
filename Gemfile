@@ -83,3 +83,5 @@ gem 'active_hash'
 
 gem "dotenv-rails"
 gem "geocoder"
+
+gem 'high_voltage', '~> 3.1.2'
