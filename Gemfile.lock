@@ -113,6 +113,7 @@ GEM
     geocoder (1.8.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    high_voltage (3.1.2)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -279,6 +280,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   geocoder
+  high_voltage (~> 3.1.2)
   image_processing (~> 1.2)
   importmap-rails
   jbuilder

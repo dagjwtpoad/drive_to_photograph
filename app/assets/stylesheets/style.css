@@ -159,6 +159,17 @@ a {
   padding-left: 6px;
   font-size: 18px;
 }
+.service{
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin-top: 200px;
+}
+.service_btn{
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
 .search{
   display: flex;
   justify-content: center;
@@ -349,6 +360,72 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+
+ /*サービスページ */
+ .service_title{
+  color: #3b4043;
+  font-size: 20px;
+  position: absolute;
+  top: calc(4% - 10px);
+  width: 100%;
+  padding: 0 60px;
+}
+.service_title_sub{
+  margin-top: 5px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+.service_body{
+  font-size: 25px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.select-reason-contents {
+  padding-top: 15px;
+}
+.reason-lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.reason-lists>.list {
+  width: 30%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.list-pict {
+  display: inline-block;
+  width: 100%;
+  height: 50%;
+}
+.reason-list-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 38px;
+  background-color: black;
+  color: whitesmoke;
+}
+.reason-list-text {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+}
+.reason-list-description {
+  font-size: 15px;
+}
+
 /* タブレット対応 */
 @media (max-width: 1024px) {
   .inner {
