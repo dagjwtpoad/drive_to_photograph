@@ -19,8 +19,8 @@ class Photograph < ApplicationRecord
     validates :address
   end
 
-  validates :category_id, numericality: { other_than: 1 , message: "can't be blank"}
-  validates :prefecture_id, numericality: { other_than: 1 , message: "can't be blank"}
+  validates :category_id, numericality: { other_than: 1 }
+  validates :prefecture_id, numericality: { other_than: 1 }
 
   def self.search(search)
     if search != ""

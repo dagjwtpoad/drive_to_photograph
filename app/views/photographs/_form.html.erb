@@ -22,7 +22,7 @@
 
   <div class="field">
     <%= f.label :description, "物語" %><br />
-    <%= f.text_area :description, class: :form__text %>
+    <%= f.text_area :description, placeholder: "写真を撮った時の思い出と道のりを入力してください", class: :form__text %>
   </div>
 
   <%= form_with(model: @photograph, local: true, class: "mt-4 form-column-width") do |f| %>
